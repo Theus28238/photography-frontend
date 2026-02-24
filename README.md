@@ -80,6 +80,8 @@ https://github.com/pDiazz-dev/Back-End-StudioPhotograph.git
 - TypeScript
 - Node.js
 - Tailwind CSS
+- JavaScript
+- Css
 
 ### Backend
 
