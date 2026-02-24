@@ -1,0 +1,91 @@
+import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
+import { Label } from '@/components/ui/label'
+import Link from 'next/link'
+
+export default function RegisterPage() {
+    return (
+        <section className="relative flex min-h-screen items-center justify-center bg-neutral-950 px-4">
+
+            {/* Background glow */}
+            <div className="absolute inset-0 -z-10">
+                <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-indigo-600/20 blur-3xl" />
+                <div className="absolute bottom-0 right-1/4 h-72 w-72 rounded-full bg-purple-600/20 blur-3xl" />
+            </div>
+
+            <form className="w-full max-w-md rounded-2xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-2xl shadow-black/40">
+
+                {/* Header */}
+                <div className="text-center">
+                    <h1 className="text-2xl font-semibold text-white">
+                        Criar conta
+                    </h1>
+                    <p className="mt-2 text-sm text-zinc-400">
+                        Comece sua jornada agora
+                    </p>
+                </div>
+
+                {/* Inputs */}
+                <div className="mt-8 space-y-5">
+                    {/* Grid para Nome e Sobrenome */}
+                    <div className="grid grid-cols-2 gap-3">
+                        <div className="space-y-2">
+                            <Label htmlFor="first-name" className="text-sm text-zinc-300">Nome</Label>
+                            <Input
+                                id="first-name"
+                                placeholder="João"
+                                className="bg-white/5 border-white/10 focus-visible:ring-1 focus-visible:ring-indigo-500 text-white"
+                            />
+                        </div>
+                        <div className="space-y-2">
+                            <Label htmlFor="last-name" className="text-sm text-zinc-300">Sobrenome</Label>
+                            <Input
+                                id="last-name"
+                                placeholder="Silva"
+                                className="bg-white/5 border-white/10 focus-visible:ring-1 focus-visible:ring-indigo-500 text-white"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="email" className="text-sm text-zinc-300">Email</Label>
+                        <Input
+                            id="email"
+                            type="email"
+                            placeholder="exemplo@email.com"
+                            className="bg-white/5 border-white/10 focus-visible:ring-1 focus-visible:ring-indigo-500 text-white"
+                        />
+                    </div>
+
+                    <div className="space-y-2">
+                        <Label htmlFor="pwd" className="text-sm text-zinc-300">Senha</Label>
+                        <Input
+                            id="pwd"
+                            type="password"
+                            placeholder="••••••••"
+                            className="bg-white/5 border-white/10 focus-visible:ring-1 focus-visible:ring-indigo-500 text-white"
+                        />
+                    </div>
+
+                    <Button
+                        variant="neutral"
+                        className="w-full font-medium border-white/10 bg-white/7 hover:bg-white/15 text-white hover:text-white/80 focus-visible:ring-neutral-900/50 active:scale-[0.98] transition-all duration-300 border p-0.5"
+                    >
+                        Criar conta
+                    </Button>
+                </div>
+
+                {/* Footer */}
+                <p className="mt-8 text-center text-sm text-zinc-400">
+                    Já tem uma conta?
+                    <Link
+                        href="./login"
+                        className="ml-1 text-zinc-300 hover:text-zinc-50 transition"
+                    >
+                        Entrar
+                    </Link>
+                </p>
+            </form>
+        </section>
+    )
+}
