@@ -85,7 +85,7 @@ https://github.com/pDiazz-dev/Back-End-StudioPhotograph.git
 
 ### Backend
 
-- Java 17
+- Java
 - Spring Boot
 - PostgreSQL
 - Maven
